@@ -1,0 +1,464 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Instructor Profile Section
+--------------------------------------------------------------*/
+.instructor-profile {
+  .instructor-profile-card {
+    background-color: var(--surface-color);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+    text-align: center;
+    position: sticky;
+    top: 100px;
+
+    .profile-image {
+      margin-bottom: 30px;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--accent-color);
+      }
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .expertise {
+      color: var(--accent-color);
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .rating {
+      margin-bottom: 30px;
+
+      i {
+        color: #ffc107;
+        font-size: 16px;
+        margin-right: 2px;
+      }
+
+      .rating-value {
+        margin-left: 10px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        font-weight: 500;
+      }
+    }
+
+    .instructor-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      padding: 20px 0;
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+      .stat-item {
+        text-align: center;
+
+        h4 {
+          color: var(--accent-color);
+          font-size: 24px;
+          font-weight: 700;
+          margin: 0 0 5px 0;
+        }
+
+        p {
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+          margin: 0;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .social-links {
+      a {
+        width: 40px;
+        height: 40px;
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--heading-color);
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  .instructor-details {
+    .about-instructor {
+      margin-bottom: 40px;
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: var(--heading-color);
+      }
+
+      p {
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+    }
+
+    .expertise-areas {
+      margin-bottom: 40px;
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: var(--heading-color);
+      }
+
+      .expertise-tags {
+        .tag {
+          display: inline-block;
+          background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+          color: var(--accent-color);
+          padding: 8px 16px;
+          border-radius: 25px;
+          margin: 5px;
+          font-size: 14px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: var(--accent-color);
+            color: var(--contrast-color);
+          }
+        }
+      }
+    }
+
+    .education-background {
+      margin-bottom: 40px;
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: var(--heading-color);
+      }
+
+      .education-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+
+        .education-icon {
+          width: 50px;
+          height: 50px;
+          background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+          color: var(--accent-color);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 20px;
+          flex-shrink: 0;
+
+          i {
+            font-size: 20px;
+          }
+        }
+
+        .education-details {
+          h4 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          p {
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+            margin: 0;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .experience-timeline {
+      h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+        color: var(--heading-color);
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 30px;
+
+        &:not(:last-child) {
+          &::after {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 30px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+          }
+        }
+
+        .timeline-marker {
+          position: absolute;
+          left: 0;
+          top: 10px;
+          width: 24px;
+          height: 24px;
+          background-color: var(--accent-color);
+          border-radius: 50%;
+          border: 3px solid var(--surface-color);
+          box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 70%);
+        }
+
+        .timeline-content {
+          h4 {
+            margin: 0 0 5px 0;
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          .company {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin: 0 0 10px 0;
+            font-size: 14px;
+          }
+
+          p {
+            line-height: 1.6;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .courses-section {
+    margin-top: 60px;
+
+    h3 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--heading-color);
+    }
+
+    .course-card {
+      background-color: var(--surface-color);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 80%);
+      }
+
+      .course-image {
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .course-duration {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          padding: 5px 12px;
+          border-radius: 15px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+
+      .course-content {
+        padding: 25px;
+
+        h4 {
+          margin: 0 0 15px 0;
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        p {
+          color: color-mix(in srgb, var(--default-color), transparent 30%);
+          margin: 0 0 20px 0;
+          line-height: 1.6;
+          font-size: 14px;
+        }
+
+        .course-meta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+
+          .rating,
+          .students {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            i {
+              margin-right: 5px;
+            }
+
+            span {
+              font-weight: 500;
+            }
+          }
+
+          .rating i {
+            color: #ffc107;
+          }
+
+          .students i {
+            color: var(--accent-color);
+          }
+        }
+
+        .course-price {
+          .current-price {
+            color: var(--accent-color);
+            font-size: 24px;
+            font-weight: 700;
+            margin-right: 10px;
+          }
+
+          .original-price {
+            color: color-mix(in srgb, var(--default-color), transparent 60%);
+            text-decoration: line-through;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .testimonials-section {
+    margin-top: 60px;
+
+    h3 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--heading-color);
+    }
+
+    .testimonial-item {
+      background-color: var(--surface-color);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 20px color-mix(in srgb, var(--default-color), transparent 90%);
+
+      .testimonial-content {
+        margin-bottom: 25px;
+
+        p {
+          font-size: 16px;
+          line-height: 1.7;
+          font-style: italic;
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          margin: 0;
+
+          &::before {
+            content: '"';
+            font-size: 24px;
+            color: var(--accent-color);
+            font-weight: 700;
+          }
+
+          &::after {
+            content: '"';
+            font-size: 24px;
+            color: var(--accent-color);
+            font-weight: 700;
+          }
+        }
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 15px;
+        }
+
+        .author-info {
+          h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            font-weight: 600;
+          }
+
+          p {
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+            font-size: 14px;
+            margin: 0 0 8px 0;
+          }
+
+          .rating {
+            i {
+              color: #ffc107;
+              font-size: 14px;
+              margin-right: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .instructor-profile-card {
+      position: static;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .instructor-profile-card {
+      padding: 30px 20px;
+
+      .instructor-stats {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .courses-section h3,
+    .testimonials-section h3 {
+      font-size: 24px;
+    }
+  }
+}

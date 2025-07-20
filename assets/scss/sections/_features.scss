@@ -1,0 +1,195 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+.features {
+  .features-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, var(--accent-color) 0%, transparent 50%);
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    .floating-card {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      background: var(--surface-color);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+
+      .card-content {
+        display: flex;
+        align-items: center;
+
+        i {
+          font-size: 32px;
+          color: var(--accent-color);
+          margin-right: 15px;
+        }
+
+        h5 {
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 5px;
+          color: var(--heading-color);
+        }
+
+        p {
+          font-size: 14px;
+          margin: 0;
+          color: color-mix(in srgb, var(--default-color), transparent 30%);
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      img {
+        height: 400px;
+      }
+
+      .floating-card {
+        bottom: 20px;
+        right: 20px;
+        padding: 15px;
+      }
+    }
+  }
+
+  .features-content {
+    padding-left: 40px;
+
+    @media (max-width: 992px) {
+      padding-left: 0;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--heading-color);
+    }
+
+    .lead {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    background: var(--surface-color);
+    border-radius: 15px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      border-color: var(--accent-color);
+
+      .feature-icon {
+        background: var(--accent-color);
+
+        i {
+          color: var(--contrast-color);
+        }
+      }
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 24px;
+        color: var(--accent-color);
+        transition: color 0.3s ease;
+      }
+    }
+
+    .feature-content {
+      flex: 1;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--heading-color);
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin: 0;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .features-content h3 {
+      font-size: 28px;
+    }
+
+    .features-content .lead {
+      font-size: 16px;
+    }
+
+    .feature-item {
+      padding: 20px;
+
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

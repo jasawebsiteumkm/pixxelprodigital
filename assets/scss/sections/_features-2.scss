@@ -1,0 +1,155 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Features 2 Section
+--------------------------------------------------------------*/
+.features-2 {
+
+  /* Intro */
+  .intro {
+    h3 {
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: var(--heading-color);
+    }
+
+    .lead {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 35px;
+      color: color-mix(in srgb, var(--default-color), transparent 15%);
+    }
+  }
+
+  /* Feature Cards */
+  .feature-cards {
+    .feature-card {
+      position: relative;
+      background: var(--surface-color);
+      padding: 25px 20px 25px 20px;
+      border-radius: 15px;
+      border-left: 4px solid var(--accent-color);
+      box-shadow: 0 8px 24px color-mix(in srgb, var(--default-color), transparent 92%);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+      }
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        background: color-mix(in srgb, var(--accent-color), transparent 85%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        transition: background 0.3s ease;
+
+        i {
+          font-size: 24px;
+          color: var(--accent-color);
+          transition: color 0.3s ease;
+        }
+      }
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--heading-color);
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0;
+        color: color-mix(in srgb, var(--default-color), transparent 35%);
+      }
+
+      &:hover .icon {
+        background: var(--accent-color);
+
+        i {
+          color: var(--contrast-color);
+        }
+      }
+    }
+  }
+
+  /* Image Stack */
+  .image-stack {
+    position: relative;
+    min-height: 400px;
+
+    .image-main,
+    .image-sub {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 90%);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.06);
+      }
+    }
+
+    .image-main {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 75%;
+      height: 100%;
+    }
+
+    .image-sub {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 50%;
+      height: 60%;
+      border: 6px solid var(--background-color);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .intro h3 {
+      font-size: 30px;
+    }
+
+    .image-stack {
+      min-height: 350px;
+
+      .image-main {
+        position: relative;
+        width: 100%;
+        height: 70%;
+      }
+
+      .image-sub {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .feature-cards .feature-card {
+      padding: 20px 18px;
+    }
+  }
+
+  /* Fix Swiper height if used within this section */
+  .swiper-wrapper {
+    height: auto !important;
+  }
+}
